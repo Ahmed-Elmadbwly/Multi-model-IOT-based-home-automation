@@ -1,0 +1,116 @@
+int i =0,j=0,k=0,l=0,m=0,n=0,o=0,p=0;
+void setup() {
+  // put your setup code here, to run once:
+pinMode(13,OUTPUT);
+pinMode(12,OUTPUT);
+pinMode(11,OUTPUT);
+pinMode(10,OUTPUT);
+pinMode(9,OUTPUT);
+pinMode(8,OUTPUT);
+pinMode(7,OUTPUT);
+pinMode(6,OUTPUT);
+digitalWrite(13,0);
+digitalWrite(12,0);
+digitalWrite(11,0);
+digitalWrite(10,0);
+digitalWrite(9,0);
+digitalWrite(8,0);
+digitalWrite(7,0);
+digitalWrite(6,0);  
+
+//
+Serial.begin(9600);
+
+}
+
+void loop() {
+ char c=Serial.read();
+ if(c=='a' and i==0){
+  digitalWrite(13,1);
+  i=1;
+ }
+ else if(c=='a' && i==1){
+  digitalWrite(13,0);
+  i=0;
+ }
+  if(c=='b' and j==0){
+  digitalWrite(12,1);
+  j=1;
+ }
+ else if(c=='b' && j==1){
+  digitalWrite(12,0);
+  j=0;
+ }
+  if(c=='c' and k==0){
+  digitalWrite(11,1);
+  k=1;
+ }
+ else if(c=='c' && k==1){
+  digitalWrite(11,0);
+  k=0;
+ }
+  if(c=='d' and l==0){
+  digitalWrite(10,1);
+  l=1;
+ }
+ else if(c=='d' && l==1){
+  digitalWrite(10,0);
+  l=0;
+ }
+  if(c=='e' and m==0){
+  digitalWrite(9,1);
+  m=1;
+ }
+ else if(c=='e' && m==1){
+  digitalWrite(9,0);
+  m=0;
+ }
+  if(c=='f' and n==0){
+  digitalWrite(8,1);
+  n=1;
+ }
+ else if(c=='f' && n==1){
+  digitalWrite(8,0);
+  n=0;
+ }
+  if(c=='g' and o==0){
+  digitalWrite(7,1);
+  o=1;
+ }
+ else if(c=='g' && o==1){
+  digitalWrite(7,0);
+  o=0;
+ }
+   if(c=='h' and p==0){
+  digitalWrite(6,1);
+  p=1;
+ }
+ else if(c=='h' && p==1){
+  digitalWrite(6,0);
+  p=0;
+ }
+  if(c=='y'){
+  digitalWrite(6,1);
+  digitalWrite(7,1);
+  digitalWrite(8,1);
+  digitalWrite(9,1);
+  digitalWrite(10,1);
+  digitalWrite(11,1);
+  digitalWrite(12,1);
+  digitalWrite(13,1);
+  i =1;j=1;k=1;l=1;m=1;n=1;o=1;p=1;
+ }
+   if(c=='z'){
+  digitalWrite(6,0);
+  digitalWrite(7,0);
+  digitalWrite(8,0);
+  digitalWrite(9,0);
+  digitalWrite(10,0);
+  digitalWrite(11,0);
+  digitalWrite(12,0);
+  digitalWrite(13,0);
+  i =0;j=0;k=0;l=0;m=0;n=0;o=0;p=0;
+ }
+
+ 
+}
